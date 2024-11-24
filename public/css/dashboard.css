@@ -1,0 +1,230 @@
+/* Variables */
+:root {
+    --primary-color: #3e3e3f !important;
+    --secondary-color: rgb(46, 112, 204) !important;
+    --accent-color: #3498db !important;
+    --text-color: #333 !important;
+    --bg-color: #f9f9f9 !important;
+    --card-bg: white !important;
+    --border-radius: 8px !important;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.layout {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--primary-color);
+    color: white;
+    width: 250px;
+    padding: 1rem;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.sidebar h2 {
+    margin-bottom: 2rem;
+}
+
+.sidebar nav ul {
+    list-style: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 1rem;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+    background: var(--secondary-color);
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+#search-bar {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+}
+
+/* Project and Task Sections */
+.projects-section,
+.tasks-section {
+    margin-bottom: 2rem;
+}
+
+.project-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 1rem);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 0.8rem;
+    text-align: center;
+}
+
+table thead {
+    background: var(--primary-color);
+    color: white;
+}
+
+.priority {
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.priority.high {
+    background: #e74c3c;
+}
+
+.priority.medium {
+    background: #f1c40f;
+}
+
+.priority.low {
+    background: var(--secondary-color);
+}
+.container {
+    width: 100%;
+}
+.product-price-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-control{
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+}
+.form-control input{
+    padding: 7px;
+}
+.save-product .cancel-btn{
+    background-color: #e74c3c;
+}
+.d-none{
+    display: none;
+}
+.error{
+    color: #e74c3c;
+    font-size: 12px;
+}
+button.btn-secondary.disabled {
+    background: #acdeff !important;
+    cursor: not-allowed;
+}
+.billing-email{
+    max-width: 400px;
+    width: 100%;
+}
+.product-container-billing{
+    padding-top:10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.btn.btn-danger.remove-product{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.generate-billing{
+    margin-top: 20px !important;
+}
+.billing-details-container{
+    margin-top: 20px;
+}
+.notifications.alert-success.cf {
+    display: flex;
+    background-color: green;
+    padding: 10px;
+    position: absolute;
+    right: 0pc;
+    color: #fff;
+}
+.customer-email{
+    display: flex;
+    gap: 4px;
+}
